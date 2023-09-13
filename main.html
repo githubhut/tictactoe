@@ -5,23 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic Tac Toe</title>
     <link rel="stylesheet" href="cascade.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
     
 </head>
 <body>
-    <div class="gamecontainer">
-        <nav>
-            <ul>
-                <li>Tic Tac Toe</li>
-            </ul>
-        </nav>
+    <div class="gamecontainer text">
+        <nav>TIC TAC TOE</nav>
+        <div class = "buttons">
+            <button id ="rbtn">reset</button>
+            <button id ="newg">new game</button>
+        </div>
 
-        <div class="info">
-            
+        <div class="scoreboard">
+            <div class="playerName">player1: <span id = "score1"></span></div>
+            <div class="playerName">player2: <span id = "score2"></span></div>
         </div>
-        <div class="scorebord">
-            <div id="p1">player1 <span id = "score1"></span></div>
-            <div id="p2">player2 <span id = "score2"></span></div>
-        </div>
+        
+        <div class="info"></div>
 
         <div class="container">
             <div class = "box bu bl">
@@ -52,13 +54,8 @@
                 <span class = "boxtext"></span>
             </div>
         </div>
-
-        <div>
-            <button id ="rbtn">reset</button>
-        </div>
-        <div>
-            <button id ="newg">new game</button>
-        </div>
+        
+        
 
         <footer>
             <ul>

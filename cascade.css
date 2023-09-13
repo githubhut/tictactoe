@@ -1,45 +1,85 @@
-/* *{
-    border: 2px solid green;
-} */
-.gamecontainer{
-    border: 2px solid red;
+*{
+    /* background-color: rgb(13, 31, 48); */
+    margin: 0;
+    
 }
-nav{
-    display: flex;
-    background-color: rgb(22, 15, 30);
-    height: 10vh;
-    color:white;
+.text{
+    color: #f0e3c0;
+    font-family: 'Luckiest Guy',cursive;
+}
+.gamecontainer{
+    /* border: 2px solid red; */
+    padding: 50px;
+    background-color: rgb(13, 31, 48);
     justify-content: center;
     align-items: center;
-    border-radius: 10px;
-    font-size: 5vh;
+    text-align: center;
+}
+/* .btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}*/
+
+.buttons{
+    /* display: flex; */
+    background-color: #db6c0f;
+    margin: 1vh;
+    padding: 1vh;
+    /* width: 75vh; */
+    
+    /* justify-content: center;
+    align-items: center; */
+    
+}
+
+.scoreboard{
+    margin: 1vh;
+    padding: 1vh;
+    font-size: 2vh;
+    text-align: center;
+    display: block;
+    /* justify-content:space-evenly; */
+    /* gap:10vh; */
+}
+
+nav{
+    display: flex;
+    /* background-color: rgb(22, 15, 30); */
+    height: 10vh;
+    /* color: rgb(240, 227, 192); */
+    justify-content: center;
+    align-items: center;
+    /* border-radius: 10px; */
+    font-size: 8vh;
     /* flex-wrap: wrap; */
 }
-nav ul{
-    list-style: none;
+
+.info{
+    font-size: 3vh;
 }
 
 .container{
-    margin-top: 5vh;
+    margin: 5vh;
     display: grid;
-    grid-template-columns: repeat(3, 25vh);
-    grid-template-rows: repeat(3, 25vh);
+    grid-template-columns: repeat(3, 15vh);
+    grid-template-rows: repeat(3, 15vh);
     justify-content: center;
-    background-color: chartreuse;
+    /* background-color: chartreuse; */
     /* flex-wrap: wrap; */
 }
 .container div{
-    background-color: aqua;
-    border: 2px solid black;
+    background-color: #3b6670;
+    border: 10px solid #0d1f30;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 35px;  
+    font-size: 10vh;
     /* flex-wrap: wrap;
     flex-shrink: calc(25); */
 }
 .container div:hover{
-    background-color: rgb(76, 245, 237);
+    background-color: #2d3a48;
     cursor: pointer;
 }
 .container .bu{
@@ -56,13 +96,13 @@ nav ul{
 }
 
 footer{
-    padding-top: 3vh;
+    /* padding-top: 3vh; */
     display: flex;
     justify-content: center;
     /* background-color: blue; */
 }
 footer ul a{
-    text-decoration: none;
+    text-decoration: none ;
     /* margin: 3vh; */
     /* background-color: rgb(121, 253, 190);
     border: 2px solid black;
