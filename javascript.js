@@ -1,6 +1,6 @@
 var contact = document.getElementById("contact info");
     contact.addEventListener('click', function run(){
-    alert('bhupenderchauhan8055@gmail.com');
+    alert('bhupenderchauhan8055@gmail.com anubroto3737@gmail.com');
 });
 
 var about = document.getElementById("about");
@@ -11,7 +11,7 @@ var about = document.getElementById("about");
 
 let turn = 'X';
 let info = document.querySelector(".info");
-info.innerText = "turn for "+ turn;
+info.innerText = "Turn for "+ turn;
 let isgameover = false;
 let sc1 = 0;
 let sc2 = 0;
@@ -42,8 +42,17 @@ let checkwin = ()=>{
     ]
     win.forEach(e =>{
         if((boxtext[e[0]].innerText === boxtext[e[1]].innerText) && (boxtext[e[0]].innerText === boxtext[e[2]].innerText) && boxtext[e[0]].innerText !== ""){
-            document.querySelector(".info").innerText = boxtext[e[0]].innerText + "Won";
+            document.querySelector(".info").innerText = "!! "+boxtext[e[0]].innerText + " Won !!";
             isgameover = true;
+
+            //changing box and boxtext colour upon win
+            let box = document.getElementsByClassName("box");
+            box[e[0]].style.background = '#db6c0f';
+            box[e[1]].style.background = '#db6c0f';
+            box[e[2]].style.background = '#db6c0f';
+            boxtext[e[0]].style.color = '#f0e3c0';
+            boxtext[e[1]].style.color = '#f0e3c0';
+            boxtext[e[2]].style.color = '#f0e3c0';
             // console.log(isgameover);
             // removeEventListener('click', e);
             if(boxtext[e[0]].innerText === "X" && rest === 0){
@@ -54,7 +63,7 @@ let checkwin = ()=>{
                 // reset();
 
             }
-            else if (boxtext[e[0]].innerText === "0" && rest === 0){
+            else if (boxtext[e[0]].innerText === "O" && rest === 0){
                 document.querySelector("#score2").innerText = ++sc2;
                 rest = 1;
                 // setTimeout(reset, 300);
@@ -69,13 +78,11 @@ let checkwin = ()=>{
 
 
 const changeTurn = ()=>{
-    // return turn === 'X' ? '0' : 'X';
-    // if(turn === "Chutiya") turn = "Chutiya";
     if(isgameover) turn = "";
     else{
 
             if(turn === 'X') {
-                turn = '0';
+                turn = 'O';
                 info.innerText = "Turn for " + turn;
             }
             else {
@@ -132,7 +139,7 @@ Array.from(boxes).forEach(element =>{
         }
     }
     element.addEventListener('click', e)
-    if(isgameover) console.log("bhenkaloda");
+    // if(isgameover) console.log("bhenkaloda");
     // if(isgameover === true)element.removeEventListener("click", e);
     
     
