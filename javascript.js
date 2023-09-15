@@ -22,8 +22,13 @@ function rst(){
     turn = "X";
     isgameover = false;
     Array.from(boxtexts).forEach(element => {
-        element.innerText = ""
+        element.innerText = "";
+        
     });
+    let box = document.querySelectorAll('.box');
+    Array.from(box).forEach(e =>{
+        e.style.background = "#3b6670";
+    })
     info.innerText = "Turn for " + turn;
     rest = 0;
 }
