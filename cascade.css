@@ -1,5 +1,4 @@
 *{
-    /* background-color: rgb(13, 31, 48); */
     margin: 0;
     
 }
@@ -8,29 +7,19 @@
     font-family: 'Luckiest Guy',cursive;
 }
 .gamecontainer{
-    /* border: 2px solid red; */
     padding: 50px;
     background-color: rgb(13, 31, 48);
     justify-content: center;
     align-items: center;
     text-align: center;
 }
-/* .btn{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}*/
 
 .buttons{
-    /* display: flex; */
+    display: inline-block;
     background-color: #db6c0f;
     margin: 1vh;
     padding: 1vh;
-    /* width: 75vh; */
-    
-    /* justify-content: center;
-    align-items: center; */
-    
+    width: 75%;
 }
 
 .scoreboard{
@@ -39,20 +28,15 @@
     font-size: 2vh;
     text-align: center;
     display: block;
-    /* justify-content:space-evenly; */
-    /* gap:10vh; */
+
 }
 
 nav{
     display: flex;
-    /* background-color: rgb(22, 15, 30); */
     height: 10vh;
-    /* color: rgb(240, 227, 192); */
     justify-content: center;
     align-items: center;
-    /* border-radius: 10px; */
     font-size: 8vh;
-    /* flex-wrap: wrap; */
 }
 
 .info{
@@ -65,55 +49,37 @@ nav{
     grid-template-columns: repeat(3, 15vh);
     grid-template-rows: repeat(3, 15vh);
     justify-content: center;
-    /* background-color: chartreuse; */
-    /* flex-wrap: wrap; */
+
 }
 .container div{
     background-color: #3b6670;
-    border: 10px solid #0d1f30;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 10vh;
-    /* flex-wrap: wrap;
-    flex-shrink: calc(25); */
+
+}
+.container .box{
+    margin: 1vh;
 }
 .container div:hover{
     background-color: #2d3a48;
     cursor: pointer;
 }
-.container .bu{
-    border-top: 0;
-}
-.container .bd{
-    border-bottom: 0;
-}
-.container .br{
-    border-right: 0;
-}
-.container .bl{
-    border-left: 0;
-}
+
 
 footer{
-    /* padding-top: 3vh; */
     display: flex;
     justify-content: center;
-    /* background-color: blue; */
 }
 footer ul a{
     text-decoration: none ;
-    /* margin: 3vh; */
-    /* background-color: rgb(121, 253, 190);
-    border: 2px solid black;
-    border-radius: 3px; */
 
 }
 footer ul button{
     border: 2px solid red;
     border-radius: 4px;
     background-color: antiquewhite;
-    /* padding: 20px; */
     margin: 2vh;
 }
 

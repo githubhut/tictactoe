@@ -55,28 +55,36 @@ let checkwin = ()=>{
             box[e[0]].style.background = '#db6c0f';
             box[e[1]].style.background = '#db6c0f';
             box[e[2]].style.background = '#db6c0f';
-            boxtext[e[0]].style.color = '#f0e3c0';
-            boxtext[e[1]].style.color = '#f0e3c0';
-            boxtext[e[2]].style.color = '#f0e3c0';
-            // console.log(isgameover);
-            // removeEventListener('click', e);
+
             if(boxtext[e[0]].innerText === "X" && rest === 0){
                 document.querySelector("#score1").innerText = ++sc1;
                 rest = 1;
-                // isgameover = false;
-                // setTimeout(reset, 300);
-                // reset();
 
             }
             else if (boxtext[e[0]].innerText === "O" && rest === 0){
                 document.querySelector("#score2").innerText = ++sc2;
                 rest = 1;
-                // setTimeout(reset, 300);
-                // reset();
             }
             
         }
     })
+}
+
+let draw = () => {
+    let boxtext = document.getElementsByClassName("boxtext");
+    let box = document.getElementsByClassName("box");
+    let everybox = [0,1,2,3,4,5,6,7,8];
+    let count = 0;
+    everybox.forEach(e =>{
+        if(boxtext[e].innerText === "X" || boxtext[e].innerText === "O" && !isgameover) count++;
+    })
+    if(count === 9) {
+        document.querySelector(".info").innerText = "!! Draw !!";
+        everybox.forEach(e =>{
+            box[e].style.background = 'gray';
+        })
+        // box[0].style.background = '#db6c0f';
+    }
 }
 
 
@@ -107,8 +115,7 @@ newg.addEventListener("click",()=>{
     document.querySelector("#score1").innerText = "";
 })
 
-//logic hamara
-// if(isgameover) boxtext.removeEventListener("click", element.e());
+
 
 let boxes = document.getElementsByClassName("box");
 Array.from(boxes).forEach(element =>{
@@ -118,36 +125,11 @@ Array.from(boxes).forEach(element =>{
             boxtext.innerText = turn;
             checkwin();
             changeTurn();
-            // element.removeEventListener();
-            // if(isgameover){
-            //     element.removeEventListener("click", e);
-
-                // let reset = confirm("Reset the match");
-                // if(reset){
-                //     let boxtexts = document.querySelectorAll('.boxtext');
-                //     turn = "X";
-                //     isgameover = false;
-                //     Array.from(boxtexts).forEach(element => {
-                //         element.innerText = ""
-                //     });
-                // }
-                // else{
-                //     // turn = "Chutiya";
-                //     let boxtexts = document.querySelectorAll('.boxtext');
-                //     // turn = "X";
-                //     isgameover = false;
-                //     Array.from(boxtexts).forEach(element => {
-                //         element.innerText = ""
-                //     });
-                // }
-            // }
+            draw();
+            
         }
     }
-    element.addEventListener('click', e)
-    // if(isgameover) console.log("bhenkaloda");
-    // if(isgameover === true)element.removeEventListener("click", e);
-    
-    
+    element.addEventListener('click', e);
     
 })
 
