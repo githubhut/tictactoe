@@ -125,8 +125,8 @@ Array.from(boxes).forEach(element =>{
     let boxtext = element.querySelector('.boxtext');
     function e(){
         if(boxtext.innerText === ''){
-            boxtext.innerText = turn;
             if(!isgameover)btn_sound.play();
+            boxtext.innerText = turn;
             checkwin();
             changeTurn();
             draw();
