@@ -16,8 +16,11 @@ let isgameover = false;
 let sc1 = 0;
 let sc2 = 0;
 let rest = 0;
+let btn_sound = new Audio("button.wav");
+let rst_btn = new Audio("rst_button.mp3");
 
 function rst(){
+    rst_btn.play();
     let boxtexts = document.querySelectorAll('.boxtext');
     turn = "X";
     isgameover = false;
@@ -123,6 +126,7 @@ Array.from(boxes).forEach(element =>{
     function e(){
         if(boxtext.innerText === ''){
             boxtext.innerText = turn;
+            if(!isgameover)btn_sound.play();
             checkwin();
             changeTurn();
             draw();
