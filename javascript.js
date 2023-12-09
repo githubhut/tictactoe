@@ -1,6 +1,6 @@
 var contact = document.getElementById("contact info");
     contact.addEventListener('click', function run(){
-    alert('bhupenderchauhan8055@gmail.com anubroto3737@gmail.com');
+    alert('chavhaanb@gmail.com anubroto3737@gmail.com');
 });
 
 var about = document.getElementById("about");
